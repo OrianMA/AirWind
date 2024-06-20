@@ -2,7 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DeckSystem : MonoBehaviour
+[CreateAssetMenu(fileName = "DeckBuild", menuName = "ScriptableObjects/Deck/DeckBuild", order = 1)]
+public class DeckSystem : ScriptableObject
 {
-    List<Card> cards;
+    public List<AEffect> cards;
 }

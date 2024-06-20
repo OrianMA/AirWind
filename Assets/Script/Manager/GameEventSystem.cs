@@ -13,20 +13,24 @@ public class GameEventSystem : MonoBehaviour
     }
 
 
-    Dictionary<EEventType, UnityEvent<object[]>> events = new Dictionary<EEventType,UnityEvent<object[]>>();
+    Dictionary<EEventType, Action<object[]>> events = new Dictionary<EEventType, Action<object[]>>();
 
-    public void Listen(EEventType type, Func<object[]> func)
+    public void Listen(EEventType type, Action<object[]> func)
     {
-        //events[type].AddListener();
+        if (!events.ContainsKey(type))
+            events.Add(type, func);
+        else
+            events[type] += func;
     }
 
-    public void Remove(EEventType type, Func<object[]> func)
+    public void Remove(EEventType type, Action<object[]> func)
     {
-
+        if (events.ContainsKey(type))
+            events[type] -= func;
     }
 
-    void Send(EEventType type)
+    public void Send(EEventType type, object[] objs)
     {
-        //events[type].Invoke();
+        events[type]?.Invoke(objs);
     }
 }
