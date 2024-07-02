@@ -10,4 +10,6 @@ public enum EEventType
     CardPickup,
     CardDestroy,
     Damage,
+    PlayerDie,
+    PlayerEnergy,
 }

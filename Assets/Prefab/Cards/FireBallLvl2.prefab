@@ -28,7 +28,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 6064474420312959200}
@@ -116,7 +116,7 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0.5
+      scalar: 0.1
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -870,7 +870,7 @@ ParticleSystem:
     rateOverTime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 50
+      scalar: 100
       minScalar: 10
       maxCurve:
         serializedVersion: 2
@@ -4886,17 +4886,47 @@ PrefabInstance:
       propertyPath: m_Name
       value: FireBall
       objectReference: {fileID: 0}
+    - target: {fileID: 3474267031754491202, guid: 2d337fdb690be7441b7d3f05aa2e8125, type: 3}
+      propertyPath: m_text
+      value: '-20
+
+'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3474267031754491202, guid: 2d337fdb690be7441b7d3f05aa2e8125, type: 3}
+      propertyPath: m_fontSize
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 3474267031754491202, guid: 2d337fdb690be7441b7d3f05aa2e8125, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 3474267031754491202, guid: 2d337fdb690be7441b7d3f05aa2e8125, type: 3}
+      propertyPath: m_VerticalAlignment
+      value: 512
+      objectReference: {fileID: 0}
+    - target: {fileID: 3474267031754491202, guid: 2d337fdb690be7441b7d3f05aa2e8125, type: 3}
+      propertyPath: m_HorizontalAlignment
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4079655427938101091, guid: 2d337fdb690be7441b7d3f05aa2e8125, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.1
+      objectReference: {fileID: 0}
     - target: {fileID: 6651470930674318998, guid: 2d337fdb690be7441b7d3f05aa2e8125, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 9dbf351c302b02f4db5abd649cee3445, type: 2}
     - target: {fileID: 8654608403522377482, guid: 2d337fdb690be7441b7d3f05aa2e8125, type: 3}
       propertyPath: m_LocalScale.x
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8654608403522377482, guid: 2d337fdb690be7441b7d3f05aa2e8125, type: 3}
       propertyPath: m_LocalScale.y
-      value: 4
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8654608403522377482, guid: 2d337fdb690be7441b7d3f05aa2e8125, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.25
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

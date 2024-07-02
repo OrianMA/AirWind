@@ -4,7 +4,7 @@ using UnityEngine;
 
 public abstract class Status : AEffect
 {
-    public override void Use(AEntity origin, AEntity target, object[] objs)
+    public override void Use(object[] objs)
     {
         throw new System.NotImplementedException();
     }

@@ -1,5 +1,5 @@
 {
-    "name": "Player",
+    "name": "PlayerInput",
     "maps": [
         {
             "name": "Player",
@@ -9,6 +9,15 @@
                     "name": "Click",
                     "type": "Button",
                     "id": "c041ef4c-e4b1-49b9-8057-e8586caf0eac",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "PassRound",
+                    "type": "Button",
+                    "id": "ff266aa6-1f4d-44b9-9cba-6788dfd560a0",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
@@ -24,6 +33,17 @@
                     "processors": "",
                     "groups": "",
                     "action": "Click",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "1112f43d-4a6b-4e68-8ebf-f2dd2cceccf5",
+                    "path": "<Keyboard>/enter",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "PassRound",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

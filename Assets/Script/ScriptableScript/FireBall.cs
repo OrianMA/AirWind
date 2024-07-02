@@ -4,8 +4,12 @@ using UnityEngine;
 public class FireBall : AEffect
 {
     public int damage;
-    public override void Use(AEntity origin, AEntity target, object[] objs)
+
+    public override void Use(object[] objs)
     {
-        target.TakeDamage(damage, new object[] {origin, target});
+        origin = (AEntity)objs[0];
+        target = (AEntity)objs[1];
+
+        target.TakeDamage(damage, new object[] { origin, target });
     }
 }

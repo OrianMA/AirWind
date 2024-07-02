@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e46a0030c12fd7e48b325dc50bbe7291, type: 3}
+  m_Name: HealLvl3
+  m_EditorClassIdentifier: 
+  energy: 4
+  prefab: {fileID: 8921782948950770107, guid: 34375e1311143ec41974504f2fb53380, type: 3}
+  cardType: 1
+  origin: {fileID: 0}
+  target: {fileID: 0}
+  card: {fileID: 0}
+  heal: 35

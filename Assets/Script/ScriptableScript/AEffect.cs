@@ -6,5 +6,12 @@ public abstract class AEffect : ScriptableObject
 {
     public int energy;
     public Card prefab;
-    public abstract void Use(AEntity origin, AEntity target, object[] objs);
+    public ECardType cardType;
+
+    public AEntity origin;
+    public AEntity target;
+    public Card card;
+
+    //Origin, Target, Effect, this (card)
+    public abstract void Use(object[] objs);
 }

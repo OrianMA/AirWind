@@ -31,6 +31,8 @@ public class GameEventSystem : MonoBehaviour
 
     public void Send(EEventType type, object[] objs)
     {
-        events[type]?.Invoke(objs);
+        if (events.ContainsKey(type))   {
+            events[type]?.Invoke(objs);
+        }
     }
 }
