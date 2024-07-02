@@ -15,7 +15,7 @@ public class CombatManager : MonoBehaviour
     public List<AEntity> playerToInstance;
     public Transform playerPos;
     public List<Transform> enemyPos;
-    public TMPro.TextMeshPro energyAddEachRoundText;
+    public TMPro.TextMeshProUGUI energyAddEachRoundText;
 
 
     bool gameStart = false;
@@ -74,9 +74,10 @@ public class CombatManager : MonoBehaviour
     {
         if (!gameStart)
         {
-            currentIndexEnergyAdd = playerList.Count;
+            currentIndexEnergyAdd = 0;
             currentPlayerId = 0;
             GameEventSystem.instance.Send(EEventType.PlayBegin, new object[] {startDeckSize, entityStartHealth, entityEnergyStart, entityMaxEnergy, entityMaxCardInGameSize });
+            energyAddEachRoundText.text = "+" + energyAddEachRound.ToString();
             StartCoroutine(WaitBoardBegin());
         }
     }
@@ -93,13 +94,13 @@ public class CombatManager : MonoBehaviour
         if (playerList.Count <= 1)
             return;
 
-        currentIndexEnergyAdd--;
-        if (currentIndexEnergyAdd <= 0)
+        currentIndexEnergyAdd++;
+        if (currentIndexEnergyAdd >= playerList.Count)
         {
             energyAddEachRound++;
-            currentIndexEnergyAdd = playerList.Count;
+            currentIndexEnergyAdd = 0;
         }
-        energyAddEachRoundText.text = energyAddEachRound.ToString();
+        energyAddEachRoundText.text = "+" + energyAddEachRound.ToString();
 
         for (int i = 0; i < playerList.Count; i++)
         {

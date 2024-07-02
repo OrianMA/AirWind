@@ -18,9 +18,6 @@ public class Card : MonoBehaviour
     private void Start()
     {
         GameEventSystem.instance.Listen(EEventType.CardDestroy, DestroyCard);
-/*        originTransformPos = transform.position;
-        originTransformRot = transform.rotation;
-        originTransformScale = transform.localScale;*/
         energyText.text = effect.energy.ToString();
     }
 
@@ -29,13 +26,14 @@ public class Card : MonoBehaviour
         if ((Card)objs[3] == this)
         {
             AEntity origin = (AEntity)objs[0];
-            origin.cardsInGame.Remove(this);
+            //origin.cardsInGame.Remove(this);
             AEntity target = (AEntity)objs[1];
-            allCardPosRef.Remove(indexPos);
+            //allCardPosRef.Remove(indexPos);
             DOTween.Sequence().Append(transform.DOMove(target.transform.position + (target.transform.position - transform.position).normalized, .2f))
                 .SetEase(Ease.Linear)
                 .OnComplete(() =>
              {
+
                  Destroy(gameObject);
              });
         }
@@ -43,6 +41,8 @@ public class Card : MonoBehaviour
 
     public void UseLisnable(AEntity origin, AEntity target)
     {
+        origin.cardsInGame.Remove(this);
+        allCardPosRef.Remove(indexPos);
         GameEventSystem.instance.Send(EEventType.CardUse, new object[] {origin, target, effect, this});
     }
 
