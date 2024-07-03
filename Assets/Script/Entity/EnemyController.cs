@@ -62,7 +62,7 @@ public class EnemyController : AEntity
 
             cardSelected.UseLisnable(this, entitySelected);
 
-            yield return new WaitForSeconds(1);
+            yield return new WaitForSeconds(.1f);
             cardSelected = null;
 
             ResetCardPos();

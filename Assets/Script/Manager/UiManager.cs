@@ -43,7 +43,7 @@ public class UiManager : MonoBehaviour
 
         foreach (TMPro.TextMeshProUGUI lifeText in lifeTexts)
         {
-            lifeText.text = $"{maxLifePoint} : {maxLifePoint}";
+            lifeText.text = $"{maxLifePoint}";
         }
 
         foreach (TMPro.TextMeshProUGUI energyText in energyTexts)
@@ -86,7 +86,7 @@ public class UiManager : MonoBehaviour
 
     void SetTextLifePoint(AEntity entity)
     {
-        lifeTexts[entity.playerId].text = $"{entity.lifePoint} / {maxLifePoint}";
+        lifeTexts[entity.playerId].text = $"{entity.lifePoint}";
         sliders[entity.playerId].value = (float)entity.lifePoint / (float)maxLifePoint;
     }
 

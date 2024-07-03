@@ -103,7 +103,6 @@ public class AEntity : MonoBehaviour, IHealth
         newCard.transform.position = Vector3.one * .5f;
         GameEventSystem.instance.Send(EEventType.CardPickup, new object[] { this, newCard });
 
-
         //Visual
         int indexChoose = 0;
         for (int i = 0 ; i < cardsInGame.Count; i++)
